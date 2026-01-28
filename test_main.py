@@ -41,7 +41,6 @@ def test_list_db(capsys):
     assert "nenad" in captured.out
 
 def test_delete_non_existent_user_raises_error():
-    # This test demonstrates that your current code crashes 
     # if an ID doesn't exist.
     with pytest.raises(IndexError):
         delete_user(999)
