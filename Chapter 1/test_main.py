@@ -15,8 +15,11 @@ def test_add_user():
     assert len(db) == 3
     assert db[2]['name'] == 'stefan'
     assert db[2]['id'] == 2
+    print(db)
 
 def test_update_user():
+    print(db)
+
     updated_data = {'id': 1, 'name': 'nenad_updated'}
     status = update_user(1, updated_data)
     
