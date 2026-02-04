@@ -77,28 +77,3 @@ class UserService:
         """Returns the current database state."""
         return self._db
 
-# --- Execution Block ---
-
-if __name__ == '__main__':
-    manager = UserService()
-    
-    try:
-        # 1. Successful Add
-        manager.add_user("test_user")
-        
-        # 2. Successful Update
-        manager.update_user(1, "nenad_updated")
-        
-        # 3. This will trigger UserNotFoundError
-        print("\nAttempting to delete non-existent ID 99...")
-        manager.delete_user(99)
-        
-    except UserManagementError as e:
-        # Because we added 'status_code' to our exceptions, 
-        # we can use it here for logic!
-        print(f"Error [{e.status_code}]: {e}")
-        
-    except Exception as e:
-        print(f"Unexpected System Crash: {e}")
-
-    print(f"\nFinal DB State: {manager.list_db()}")
