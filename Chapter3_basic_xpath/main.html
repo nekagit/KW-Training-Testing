@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPath Testing Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .container { margin: 20px 0; }
+        .card { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+        .btn-primary { background: blue; color: white; padding: 5px 10px; }
+        .alert { background: yellow; padding: 10px; }
+        .alert-warning { background: orange; }
+        .alert-danger { background: red; color: white; }
+        .error { color: red; }
+        .hidden { display: none; }
+        .item { margin: 5px 0; }
+        .modal { background: rgba(0,0,0,0.5); padding: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to XPath Testing</h1>
+    
+    <div class="container">
+        <form id="loginForm" action="/submit" method="post">
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username">
+            </div>
+            
+            <div>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email">
+            </div>
+            
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </div>
+            
+            <div>
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="terms" name="terms" checked>
+                <label for="terms">Accept terms</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" checked>
+                <label for="female">Female</label>
+            </div>
+            
+            <div>
+                <label for="country">Country</label>
+                <select name="country" id="country">
+                    <option value="">Select country</option>
+                    <option value="US">United States</option>
+                    <option value="UK" selected>United Kingdom</option>
+                    <option value="CA">Canada</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn-primary">Login</button>
+            <button type="button" class="btn-primary secondary">Cancel</button>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <div class="container">
+        <p>This is a paragraph with some error text in it.</p>
+        <p>Another paragraph here.</p>
+        <p>Third paragraph for testing.</p>
+    </div>
+    
+    <div class="alert alert-warning" id="alert-msg-123">
+        Warning message here
+    </div>
+    
+    <div class="alert alert-danger">
+        Error message here
+    </div>
+    
+    <div class="card" id="product-card-1">
+        <h3>Product 1</h3>
+        <p>Description</p>
+    </div>
+    
+    <div class="card" id="product-card-2">
+        <h3>Product 2</h3>
+        <p>Description</p>
+    </div>
+    
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    
+    <ul class="menu">
+        <li>Menu Item 1</li>
+        <li>Menu Item 2</li>
+        <li>Menu Item 3</li>
+        <li>Menu Item 4</li>
+    </ul>
+    
+    <div>
+        <a href="/home">Home</a>
+        <a href="/contact">Contact</a>
+        <a href="/about">About</a>
+        <a href="/help">Click here for help</a>
+    </div>
+    
+    <table id="users">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>jane@example.com</td>
+                <td>25</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="modal">
+        <button>Confirm</button>
+        <button>Cancel</button>
+    </div>
+    
+    <div data-testid="user-profile" custom-id="product-123">
+        User Profile Area
+    </div>
+    
+    <button data-action="submit-form" aria-label="Close" data-test="login-submit">
+        Action Button
+    </button>
+    
+    <div role="alert" class="notification">
+        Notification message
+    </div>
+    
+    <div id="user_12345" class="user-container">Dynamic ID element</div>
+    
+    <button>    Submit    </button>
+    
+    <button disabled>Disabled Button</button>
+    <button>Enabled Button</button>
+    
+    <div style="display:block">Visible div</div>
+    <div style="display:none">Hidden div</div>
+    
+    <input type="text" id="user_input_field" name="search" placeholder="Search...">
+    
+</body>
+</html>
